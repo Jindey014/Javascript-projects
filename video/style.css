@@ -1,0 +1,96 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+header {
+    height: 100vh;
+    position: relative;
+    display: grid;
+    place-items: center;
+
+}
+
+header h1 {
+    font-size: 50px;
+    text-transform: capitalize;
+    color: white;
+    letter-spacing: 1px;
+}
+
+.video-controller {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+.switch-btn {
+    position: absolute;
+    left: 10%;
+    bottom: 10%;
+    width: 150px;
+    height: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: none;
+    border-radius: 9px;
+    cursor: pointer;
+}
+
+span {
+    /* display: inline-block; */
+    font-size: 15px;
+    text-transform: capitalize;
+    color: skyblue;
+}
+
+.switch {
+    background: skyblue;
+    position: absolute;
+    border-radius: 9px;
+    height: 100%;
+    width: 50%;
+    left: 0;
+    display: block;
+    transition: 0.3s;
+}
+
+.slide .switch {
+    left: 50%;
+}
+
+.preloader {
+    position: fixed;
+    background: white;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 3;
+    display: grid;
+    place-items: center;
+    visibility: visible;
+}
+
+.hide-preloader {
+    visibility: hidden;
+    z-index: -999;
+}
